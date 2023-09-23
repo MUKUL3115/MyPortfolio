@@ -204,9 +204,9 @@ footer {
 
 .btn-rounded-white {
     display: inline-block;
-    color: #fff;
+   
     padding: 15px 25px;
-    border: 3px solid #fff;
+    border: 3px solid blue;
     border-radius: 30px;
     transition: .5s ease all
 }
@@ -275,7 +275,7 @@ footer {
 }
 
 #lead-content h1 {
-    color: #fff;
+    
     font-weight: 900;
     font-size: 5em;
     text-transform: uppercase;
@@ -284,7 +284,7 @@ footer {
 }
 
 #lead-content h2 {
-    color: #a0cfee;
+   
     font-weight: 500;
     font-size: 2.25em;
     margin-bottom: 15px
@@ -298,7 +298,7 @@ footer {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(33, 125, 187, 0.8);
+    
     z-index: 1
 }
 
@@ -310,7 +310,7 @@ footer {
     text-align: center;
     z-index: 10;
     bottom: 15px;
-    color: #fff
+    color: blue
 }
 
 #lead-down span {
@@ -345,6 +345,7 @@ footer {
 }
 
 #about {
+    margin-top: 100px;
     padding: 75px 15px;
     border-bottom: 1px solid #dcd9d9
 }
@@ -359,6 +360,7 @@ footer {
 }
 
 #experience {
+    margin-top: 100px;
     padding: 50px 15px;
     text-align: center;
     border-bottom: 1px solid #dcd9d9
@@ -464,6 +466,7 @@ footer {
 }
 
 #education {
+    margin-top: 100px;
     padding: 50px 15px 20px 15px;
     border-bottom: 1px solid #dcd9d9;
     text-align: center
@@ -513,6 +516,7 @@ footer {
 }
 
 #projects {
+    margin-top: 100px;
     padding: 50px 15px;
     border-bottom: 1px solid #dcd9d9;
     text-align: center
@@ -528,7 +532,7 @@ footer {
     max-width: 900px;
     margin: 0 auto 30px auto;
     overflow: hidden;
-    background: #fff;
+    
     border-radius: 4px
 }
 
@@ -568,7 +572,8 @@ footer {
     display: none
 }
 
-#skills {
+#skills { 
+    margin-top: 100px;
     padding: 50px 15px;
     text-align: center
 }
@@ -596,21 +601,23 @@ footer {
     font-size: 1.2em
 }
 
-#contact {
+#contact { 
+    margin-top: 100px;
     padding: 50px 15px;
-    background: #3498db;
     text-align: center
+    
 }
 
 #contact h2 {
     margin: 0 0 15px 0;
-    color: #fff;
+    color: #000;
     font-weight: 500
 }
 
 #contact-form {
     max-width: 500px;
-    margin: 0 auto
+    margin: 0 auto;
+   
 }
 
 #contact-form input,
@@ -619,39 +626,38 @@ footer {
     width: 100%;
     padding: 10px;
     border-radius: 4px;
-    border: none;
+    border: 2px solid black;
     margin-bottom: 10px;
-    background: #1d6fa5;
-    color: #fff;
+    color:#000;
     transition: .5s ease all
 }
 
 #contact-form input::-webkit-input-placeholder,
 #contact-form textarea::-webkit-input-placeholder {
-    color: #fff
+    color: #000
 }
 
 #contact-form input:-moz-placeholder,
 #contact-form textarea:-moz-placeholder {
-    color: #fff;
+    color: #000;
     opacity: 1
 }
 
 #contact-form input::-moz-placeholder,
 #contact-form textarea::-moz-placeholder {
-    color: #fff;
+    color: #000;
     opacity: 1
 }
 
 #contact-form input:-ms-input-placeholder,
 #contact-form textarea:-ms-input-placeholder {
-    color: #fff
+    color: #000
 }
 
 #contact-form input:focus,
 #contact-form textarea:focus {
     outline: none;
-    background: #16527a
+    background: whitesmoke
 }
 
 #contact-form textarea {
@@ -665,7 +671,7 @@ footer {
     background: #fff;
     border-radius: 4px;
     padding: 5px 10px;
-    border: none;
+    border: 2px solid skyblue;
     color: #3498db;
     font-weight: 700;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -838,9 +844,12 @@ footer {
     }
 
     footer {
+        
         text-align: center
     }
-
+ #ftr{
+    margin-top: 100px;
+ }
     .social {
         text-align: center
     }
@@ -859,4 +868,58 @@ footer {
         font-size: 0.9em;
         padding: 5px 10px
     }
+}
+
+
+
+@keyframes rotate {
+	100% {
+		transform: rotate(1turn);
+	}
+}
+
+.neon-border {
+	position: relative;
+	z-index: 0;
+	border-radius: 10px;
+	overflow: hidden;
+	padding: 2rem;
+	
+	&::before {
+		content: '';
+		position: absolute;
+		z-index: -2;
+		left: -50%;
+		top: -50%;
+		width: 200%;
+		height: 200%;
+		background-color: #399953;
+		background-repeat: no-repeat;
+		background-size: 50% 50%, 50% 50%;
+		background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+		background-image: linear-gradient(#399953, #399953), linear-gradient(#fbb300, #fbb300), linear-gradient(#d53e33, #d53e33), linear-gradient(#377af5, #377af5);
+		animation: rotate 2s linear infinite;
+	}
+	
+	&::after {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		left: 6px;
+		top: 6px;
+		width: calc(100% - 12px);
+		height: calc(100% - 12px);
+		background: white;
+		border-radius: 5px;
+		animation: opacityChange 5s infinite alternate;
+	}
+}
+
+@keyframes opacityChange {
+	50% {
+		opacity:1;
+	}
+	100% {
+		opacity: .5;
+	}
 }
